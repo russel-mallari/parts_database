@@ -1,0 +1,10 @@
+#ifndef DEFINES_H
+#define DEFINES_H
+
+#define PART_ID_SIZE 11
+#define PART_NAME_SIZE 20
+#define DATE_UPDATED_SIZE 12
+#define PART_DESCRIPTION_SIZE 30
+#define PART_TYPE_SIZE  20
+
+#endif
