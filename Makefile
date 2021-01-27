@@ -22,6 +22,10 @@ $(TARGET_FILE) : $(OBJECT_PATH)
 	cc -I $(INCLUDE_FOLDER) -o $(TARGET_FILE) $(OBJECT_PATH)
 
 $(OBJECT_FOLDER)/%.o: $(SOURCE_FOLDER)/%.c
+
+# create objects folder if it does not exist
+	mkdir -p objects
+	
 	cc -I $(INCLUDE_FOLDER) -c -o $@  $<
 
 clean:
