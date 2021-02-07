@@ -32,7 +32,7 @@ void file_write(const char *filename)
          fprintf(stderr, "Could not open the file\n");
     }
     
-    fprintf(output, "%-11s    %-8d    %-20s    %-d/%-d/%d      %-30s\n", elec_part.part_ID, elec_part.quantity, elec_part.part_name, tm1.tm_mon + 1, tm1.tm_mday, tm1.tm_year + 1900, elec_part.part_description);
+    fprintf(output, "%-11s    %-8d    %-20s    %-d/%-d/%d        %-30s\n", elec_part.part_ID, elec_part.quantity, elec_part.part_name, tm1.tm_mon + 1, tm1.tm_mday, tm1.tm_year + 1900, elec_part.part_description);
     
     fclose(output);
 }
@@ -265,7 +265,7 @@ void record_edit(void)
             printf("Error\n");
     }
 
-    fprintf(ptr, "%-11s    %-8d    %-20s    %-d/%-d/%d      %-30s\n", elec_part.part_ID, elec_part.quantity, elec_part.part_name, tm1.tm_mon + 1, tm1.tm_mday, tm1.tm_year + 1900, elec_part.part_description);
+    fprintf(ptr, "%-11s    %-8d    %-20s    %-d/%-d/%d        %-30s", elec_part.part_ID, elec_part.quantity, elec_part.part_name, tm1.tm_mon + 1, tm1.tm_mday, tm1.tm_year + 1900, elec_part.part_description);
 
     fclose(ptr);
 }
